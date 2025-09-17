@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Input } from '@rneui/themed';
 
 const CustomInput = ({ value, onChangeText, placeholder, secureTextEntry, keyboardType, autoCapitalize, rightIcon }) => (
