@@ -28,10 +28,6 @@ const SettingsScreen = () => {
             </TouchableOpacity>
           ))}
         </View>
-        <TouchableOpacity style={styles.logoutButton}>
-          <Icon name="logout" size={20} color={COLORS.error} style={styles.logoutIcon} />
-          <Text style={styles.logoutText}>Logout</Text>
-        </TouchableOpacity>
       </ScrollView>
     </View>
   );
