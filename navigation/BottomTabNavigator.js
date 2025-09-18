@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeScreen, ServiceRequestsScreen, ProfileScreen, SettingsScreen } from '../screens';
+import { HomeScreen, ProfileScreen, SettingsScreen } from '../screens';
 import { HOME_SCREEN, SERVICE_REQUESTS_SCREEN, PROFILE_SCREEN, SETTINGS_SCREEN } from '../screens/constants';
+import { COLORS } from '../constants/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -77,11 +78,6 @@ const BottomTabNavigator = () => (
       options={{ title: 'Home' }}
     />
     <Tab.Screen
-      name={SERVICE_REQUESTS_SCREEN}
-      component={ServiceRequestsScreen}
-      options={{ title: 'Requests' }}
-    />
-    <Tab.Screen
       name={PROFILE_SCREEN}
       component={ProfileScreen}
       options={{ title: 'Profile' }}
@@ -97,7 +93,7 @@ const BottomTabNavigator = () => (
 const styles = StyleSheet.create({
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.background,
     height: 70,
     borderRadius: 18,
     margin: 15,
