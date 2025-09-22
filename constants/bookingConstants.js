@@ -1,3 +1,5 @@
+import { COLORS } from './colors';
+
 export const BOOKING_STATUS = {
   PENDING: 'Pending',
   ACCEPTED: 'Accepted',
@@ -34,36 +36,63 @@ export const FILTER_OPTIONS = {
   ],
 };
 
+export const EARNINGS_FILTER_OPTIONS = {
+  SERVICE_TYPE: [
+    { label: 'All', value: 'All' },
+    { label: 'Run Session', value: SERVICE_TYPES.RUN_SESSION },
+    { label: 'Grooming', value: SERVICE_TYPES.GROOMING },
+    { label: 'Health Check', value: SERVICE_TYPES.HEALTH_CHECK },
+    { label: 'Vet Visit', value: SERVICE_TYPES.VET_VISIT },
+    { label: 'Dog Walking', value: SERVICE_TYPES.DOG_WALKING },
+  ],
+  DATE_RANGE: [
+    { label: 'All Time', value: null },
+    { label: 'Today', value: 'today' },
+    { label: 'This Week', value: 'week' },
+    { label: 'This Month', value: 'month' },
+    { label: 'Last 3 Months', value: 'quarter' },
+    { label: 'This Year', value: 'year' },
+  ],
+  AMOUNT_RANGE: [
+    { label: 'All', value: 'All' },
+    { label: 'Under $50', value: 'under_50' },
+    { label: '$50 - $100', value: '50_100' },
+    { label: '$100 - $200', value: '100_200' },
+    { label: '$200 - $500', value: '200_500' },
+    { label: 'Over $500', value: 'over_500' },
+  ],
+};
+
 export const STATUS_COLORS = {
   [BOOKING_STATUS.PENDING]: {
-    background: '#FEF3C7',
-    text: '#92400E',
-    border: '#F59E0B',
+    background: COLORS.warningLight,
+    text: COLORS.warningDark,
+    border: COLORS.warning,
   },
   [BOOKING_STATUS.ACCEPTED]: {
-    background: '#DBEAFE',
-    text: '#1E40AF',
-    border: '#3B82F6',
+    background: COLORS.successLight,
+    text: COLORS.successDark,
+    border: COLORS.success,
   },
   [BOOKING_STATUS.IN_PROGRESS]: {
-    background: '#F3E8FF',
-    text: '#7C3AED',
-    border: '#8B5CF6',
+    background: COLORS.infoLight,
+    text: COLORS.infoDark,
+    border: COLORS.info,
   },
   [BOOKING_STATUS.COMPLETED]: {
-    background: '#D1FAE5',
-    text: '#065F46',
-    border: '#10B981',
+    background: COLORS.successLight,
+    text: COLORS.successDark,
+    border: COLORS.success,
   },
   [BOOKING_STATUS.CANCELLED]: {
-    background: '#FEE2E2',
-    text: '#991B1B',
-    border: '#EF4444',
+    background: COLORS.errorLight,
+    text: COLORS.errorDark,
+    border: COLORS.error,
   },
   [BOOKING_STATUS.DECLINED]: {
-    background: '#F3F4F6',
-    text: '#374151',
-    border: '#6B7280',
+    background: COLORS.border,
+    text: COLORS.textSecondary,
+    border: COLORS.divider,
   },
 };
 
