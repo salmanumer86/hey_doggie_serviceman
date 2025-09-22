@@ -8,3 +8,4 @@ export { default as SettingsScreen } from './SettingsScreen/SettingsScreen';
 export {default as RecentActivityScreen} from './RecentActivityScreen/RecentActivityScreen'
 export {default as BookingOverviewScreen} from './BookingOverviewScreen/BookingOverviewScreen'
 export {default as SupportScreen} from './SupportScreen/SupportScreen'
+export { default as DashboardScreen } from './DashboardScreen/DashboardScreen'
