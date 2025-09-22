@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { AuthScreen } from '../screens';
+import { AuthScreen, DashboardScreen } from '../screens';
 import BottomTabNavigator from '../components/BottomTabNavigator';
 import { AUTH_SCREEN, MAIN_TABS_SCREEN } from '../screens/constants';
 import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
@@ -14,6 +14,9 @@ import BookingOverviewScreen from '../screens/BookingOverviewScreen/BookingOverv
 import RecentActivityScreen from '../screens/RecentActivityScreen/RecentActivityScreen';
 import SupportScreen from '../screens/SupportScreen/SupportScreen';
 import EarningsScreen from '../screens/EarningsScreen/EarningsScreen';
+import { COLORS } from '../constants/colors';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -30,14 +33,14 @@ const AppNavigator = () => {
           options={{
             title: 'Bookings',
             headerStyle: {
-              backgroundColor: '#FFFFFF',
+              backgroundColor: COLORS.surface,
             },
             headerTitleStyle: {
-              color: '#1A237E',
+              color: COLORS.primary,
               fontSize: 18,
               fontWeight: '700',
             },
-            headerTintColor: '#1A237E',
+            headerTintColor: COLORS.primary,
             headerBackTitleVisible: false,
           }}
         />
@@ -47,14 +50,14 @@ const AppNavigator = () => {
           options={{ 
             title: 'Booking Details',
             headerStyle: {
-              backgroundColor: '#FFFFFF',
+              backgroundColor: COLORS.surface,
             },
             headerTitleStyle: {
-              color: '#1A237E',
+              color: COLORS.primary,
               fontSize: 18,
               fontWeight: '700',
             },
-            headerTintColor: '#1A237E',
+            headerTintColor: COLORS.primary,
             headerBackTitleVisible: false,
           }} 
         />
@@ -63,20 +66,22 @@ const AppNavigator = () => {
         <Stack.Screen name="PrivacyScreen" component={PrivacyScreen} options={{ title: 'Privacy' }} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} options={{ title: 'Help' }} />
         <Stack.Screen name="AboutScreen" component={AboutScreen} options={{ title: 'About' }} />
+        <Stack.Screen name="DashboardScreen" component={DashboardScreen} options={{ title: 'Dashboard' }} />
+
         <Stack.Screen
           name="EarningsScreen"
           component={EarningsScreen}
           options={{
             title: 'Earnings',
             headerStyle: {
-              backgroundColor: '#FFFFFF',
+              backgroundColor: COLORS.surface,
             },
             headerTitleStyle: {
-              color: '#1A237E',
+              color: COLORS.primary,
               fontSize: 18,
               fontWeight: '700',
             },
-            headerTintColor: '#1A237E',
+            headerTintColor: COLORS.primary,
             headerBackTitleVisible: false,
           }}
         />
@@ -86,14 +91,14 @@ const AppNavigator = () => {
           options={{
             title: 'Recent Activity',
             headerStyle: {
-              backgroundColor: '#FFFFFF',
+              backgroundColor: COLORS.surface,
             },
             headerTitleStyle: {
-              color: '#1A237E',
+              color: COLORS.primary,
               fontSize: 18,
               fontWeight: '700',
             },
-            headerTintColor: '#1A237E',
+            headerTintColor: COLORS.primary,
             headerBackTitleVisible: false,
           }}
         />
@@ -103,14 +108,14 @@ const AppNavigator = () => {
           options={{
             title: 'Support',
             headerStyle: {
-              backgroundColor: '#FFFFFF',
+              backgroundColor: COLORS.surface,
             },
             headerTitleStyle: {
-              color: '#1A237E',
+              color: COLORS.primary,
               fontSize: 18,
               fontWeight: '700',
             },
-            headerTintColor: '#1A237E',
+            headerTintColor: COLORS.primary,
             headerBackTitleVisible: false,
           }}
         />
