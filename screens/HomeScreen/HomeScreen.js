@@ -31,7 +31,7 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const handleDashboardPress = () => {
-    console.log('Dashboard pressed');
+    navigation.navigate('DashboardScreen');
   };
 
   const handleBookingsPress = () => {
@@ -49,6 +49,8 @@ const HomeScreen = ({ navigation }) => {
   const handleSupportPress = () => {
     navigation.navigate('SupportScreen');
   };
+
+
 
 
   return (
@@ -79,28 +81,28 @@ const HomeScreen = ({ navigation }) => {
             title="Bookings"
             subtitle="3 scheduled"
             onPress={handleBookingsPress}
-            color="#10B981"
+            color={COLORS.secondary}
           />
           <DashboardButton
             icon="currency-usd"
             title="Earnings"
             subtitle="$245.00"
             onPress={handleEarningsPress}
-            color="#F59E0B"
+            color={COLORS.accent}
           />
           <DashboardButton
             icon="clock-outline"
             title="Activity"
             subtitle="Last 24h"
             onPress={handleActivityPress}
-            color="#8B5CF6"
+            color={COLORS.info}
           />
           <DashboardButton
             icon="headset"
             title="Support"
             subtitle="Get help"
             onPress={handleSupportPress}
-            color="#EF4444"
+            color={COLORS.error}
           />
         </View>
       </ScrollView>
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 18,
-    paddingBottom: 24,
+    paddingBottom: 20,
   },
   buttonGrid: {
     flexDirection: 'row',
@@ -131,7 +133,7 @@ const styles = StyleSheet.create({
   },
   dashboardButton: {
     width: buttonWidth,
-    backgroundColor: COLORS.card,
+    backgroundColor: COLORS.surface,
     borderRadius: 16,
     padding: 16,
     alignItems: 'center',
@@ -142,12 +144,14 @@ const styles = StyleSheet.create({
     elevation: 4,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#F0F4FF',
+    borderColor: COLORS.border,
   },
   iconContainer: {
     width: 48,
     height: 48,
     borderRadius: 24,
+    borderWidth: 1,
+    borderColor: COLORS.border,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 10,
@@ -161,7 +165,7 @@ const styles = StyleSheet.create({
   },
   buttonSubtitle: {
     fontSize: 11,
-    color: '#6B7280',
+    color: COLORS.textSecondary,
     fontWeight: '500',
     textAlign: 'center',
   },
