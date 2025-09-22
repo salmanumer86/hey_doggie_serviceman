@@ -80,18 +80,18 @@ const styles = StyleSheet.create({
   },
   subGreeting: {
     fontSize: 14,
-    color: '#6B7280',
+    color: COLORS.textSecondary,
     fontWeight: '500',
   },
   simpleContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.surface,
     borderRadius: 18,
     margin: 15,
     marginTop: 25,
     height: 75,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: COLORS.shadow,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
   simpleTitle: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: COLORS.text,
   },
 });
 
