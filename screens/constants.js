@@ -1,0 +1,14 @@
+export const MAIN_TABS_SCREEN = 'Back';
+export const AUTH_SCREEN = 'Auth';
+export const HOME_SCREEN = 'Home';
+export const SERVICE_REQUESTS_SCREEN = 'ServiceRequests';
+export const REQUEST_DETAILS_SCREEN = 'RequestDetails';
+export const MY_SCHEDULE_SCREEN = 'MySchedule';
+export const EARNINGS_SCREEN = 'Earnings';
+export const PROFILE_SCREEN = 'Profile';
+export const NOTIFICATIONS_SCREEN = 'Notifications';
+export const SETTINGS_SCREEN = 'Settings'; 
+export const RECENT_ACTIVITY_SCREEN = 'RecentActivity'
+export const BOOKING_OVERVIEW_SCREEN = 'BookingOverview'
+export const SUPPORT_SCREEN = 'Support'
+export const DASHBOARD_SCREEN= 'Dashboard'
