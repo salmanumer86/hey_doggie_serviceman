@@ -1,6 +1,7 @@
 
 import { Button } from '@rneui/themed';
 import { ActivityIndicator, View, Text } from 'react-native';
+import { COLORS } from '../../../constants/colors';
 
 const CustomButton = ({
   title = '',
@@ -31,18 +32,18 @@ const CustomButton = ({
 }) => {
   const variants = {
     primary: isActive
-      ? { backgroundColor: '#3b82f6', shadowColor: '#3b82f6', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
-      : { backgroundColor: '#2563eb' },
+      ? { backgroundColor: COLORS.primaryDark, shadowColor: COLORS.primary, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
+      : { backgroundColor: COLORS.buttonPrimary },
     secondary: isActive
-      ? { backgroundColor: '#d1d5db', shadowColor: '#9ca3af', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
-      : { backgroundColor: '#e5e7eb' },
+      ? { backgroundColor: COLORS.border, shadowColor: COLORS.divider, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
+      : { backgroundColor: COLORS.buttonSecondary },
     outline: isActive
-      ? { backgroundColor: '#f3f4f6', borderWidth: 1, borderColor: borderColor, shadowColor: '#9ca3af', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
+      ? { backgroundColor: COLORS.background, borderWidth: 1, borderColor: borderColor, shadowColor: COLORS.shadowLight, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
       : { backgroundColor: 'transparent', borderWidth: 1, borderColor: borderColor },
     golden: isActive
       ? {
-        backgroundColor: '#fbbf24',
-        shadowColor: '#f59e0b',
+        backgroundColor: COLORS.accentLight,
+        shadowColor: COLORS.accent,
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.4,
         shadowRadius: 8,
@@ -50,8 +51,8 @@ const CustomButton = ({
         transform: [{ scale: 1.05 }]
       }
       : {
-        backgroundColor: '#f59e0b',
-        shadowColor: '#d97706',
+        backgroundColor: COLORS.accent,
+        shadowColor: COLORS.accentDark,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.3,
         shadowRadius: 4,
@@ -59,8 +60,8 @@ const CustomButton = ({
       },
     green: isActive
       ? {
-        backgroundColor: '#059669',
-        shadowColor: '#047857',
+        backgroundColor: COLORS.successDark,
+        shadowColor: COLORS.success,
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.4,
         shadowRadius: 8,
@@ -68,8 +69,8 @@ const CustomButton = ({
         transform: [{ scale: 1.02 }]
       }
       : {
-        backgroundColor: '#10b981',
-        shadowColor: '#059669',
+        backgroundColor: COLORS.buttonSuccess,
+        shadowColor: COLORS.successDark,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.3,
         shadowRadius: 4,
@@ -77,8 +78,8 @@ const CustomButton = ({
       },
     blue: isActive
       ? {
-        backgroundColor: '#1d4ed8',
-        shadowColor: '#1e40af',
+        backgroundColor: COLORS.primaryDark,
+        shadowColor: COLORS.primary,
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.4,
         shadowRadius: 8,
@@ -86,18 +87,18 @@ const CustomButton = ({
         transform: [{ scale: 1.02 }]
       }
       : {
-        backgroundColor: '#3b82f6',
-        shadowColor: '#2563eb',
+        backgroundColor: COLORS.buttonPrimary,
+        shadowColor: COLORS.primaryDark,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.3,
         shadowRadius: 4,
         elevation: 3
       },
     white: isActive
-      ? { backgroundColor: '#f9fafb', shadowColor: '#d1d5db', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
-      : { backgroundColor: '#ffffff' },
+      ? { backgroundColor: COLORS.background, shadowColor: COLORS.border, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
+      : { backgroundColor: COLORS.surface },
     ghost: isActive
-      ? { backgroundColor: '#e5e7eb', shadowColor: '#9ca3af', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
+      ? { backgroundColor: COLORS.border, shadowColor: COLORS.divider, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4, elevation: 3 }
       : { backgroundColor: 'transparent' },
   };
 
@@ -115,9 +116,9 @@ const CustomButton = ({
 
   const getTextColor = () => {
     if (fontColor) return fontColor;
-    if (variant === 'outline' || variant === 'ghost') return '#374151';
-    if (variant === 'white') return '#1f2937';
-    return '#ffffff';
+    if (variant === 'outline' || variant === 'ghost') return COLORS.text;
+    if (variant === 'white') return COLORS.text;
+    return COLORS.textOnPrimary;
   };
 
   const getBackgroundColor = () => {
