@@ -7,9 +7,9 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
-const ACTIVE_BG = '#6544E7';
-const ACTIVE_COLOR = '#fff';
-const INACTIVE_COLOR = '#B0B9CC';
+const ACTIVE_BG = COLORS.tabActive;
+const ACTIVE_COLOR = COLORS.textOnPrimary;
+const INACTIVE_COLOR = COLORS.tabInactive;
 
 const icons = {
   [HOME_SCREEN]: 'home-variant',
@@ -93,14 +93,14 @@ const BottomTabNavigator = () => (
 const styles = StyleSheet.create({
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.tabBackground,
     height: 70,
     borderRadius: 18,
     margin: 15,
     marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'space-between',
-    shadowColor: '#000',
+    shadowColor: COLORS.shadow,
     shadowOffset: { width: 0, height: -2 },
     shadowOpacity: 0.07,
     shadowRadius: 8,
